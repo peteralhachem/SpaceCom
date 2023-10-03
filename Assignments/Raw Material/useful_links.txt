@@ -1,0 +1,15 @@
+General document about questions, interviews and notes:
+
+https://docs.google.com/document/d/181WeoNeqQg7LjoHQv7fZZ3m-wfnuaLtZsjMfzORU2EE/edit?usp=sharing
+
+Brainstorming tool:
+
+https://jamboard.google.com/d/1Q-9EL_L9CuX_dMg2lPOq8_BwWaeVBIkO5fT-ToYuBD4/edit?usp=sharing
+
+SpaceCom repository:
+
+https://github.com/polito-hci-2022/SpaceCom
+
+Figma Medium-Fidelity prototype: 
+
+https://www.figma.com/proto/YHqW73FhVeTnNb7YGfEbaC/Mid-Fy-Prototype-SpaceCom?node-id=11%3A261&scaling=scale-down&page-id=0%3A1&starting-point-node-id=11%3A261

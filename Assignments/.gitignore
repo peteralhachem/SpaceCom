@@ -1,0 +1,4 @@
+#Excluding not relevant files
+.DS_Store
+A5/hi-fi-prototype/node_modules
+HighFidelityPrototype
