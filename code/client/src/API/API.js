@@ -1,4 +1,4 @@
-const APIURL = new URL('http://195.231.81.64:3001/api/');
+const APIURL = new URL('http://localhost:3001/api/');
 
 const getEvents = async () => {
 	const response = await fetch(new URL('events', APIURL), {

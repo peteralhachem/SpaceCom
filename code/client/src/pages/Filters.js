@@ -184,6 +184,7 @@ export default function Filters(props) {
               startIcon={<DeleteIcon />}
               color='black'
               variant='outlined'
+              disabled={areFiltersClear()}
               onClick={() => {
                 if (areFiltersClear() === false) {
                   setAlertOpen(true)

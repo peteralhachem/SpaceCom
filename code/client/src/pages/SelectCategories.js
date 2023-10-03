@@ -3,6 +3,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
 import ArrowBack from '@mui/icons-material/ArrowBack';
 import { ThemeProvider } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 import theme from "../Theme";
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -66,7 +67,7 @@ export default function SelectCategories(props) {
             if (currentStep === -1) {
                 setTotalSteps(old => --old);
                 setTemporaryUserCategories(old => old.filter(e => e !== id));
-                setTemporaryUserSubCategories(old => old.filter(tSubC => props.subCategories.filter(s => s.category != id).map(s => s.id).includes(tSubC)))
+                setTemporaryUserSubCategories(old => old.filter(tSubC => props.subCategories.filter(s => s.category !== id).map(s => s.id).includes(tSubC)))
             } else {
                 setTemporaryUserSubCategories(old => old.filter(e => e !== id));
             }
@@ -193,11 +194,17 @@ export default function SelectCategories(props) {
                 </DialogTitle>
 
                 <DialogContent sx={{ textAlign: "justify" }}>
-                    <DialogContentText id="alert-dialog-description">
-                        <p>By clicking 'Save' your new interests will be saved, overriding the previous ones.</p>
-                        <p style={{ textAlign: "center", color: "rgb(231, 0, 6)" }}><b>{"ATTENTION!"}</b></p>
-                        <p style={{ textAlign: "center" }}>All the liked events will be cleared!</p>
-                    </DialogContentText>
+                    <div id="alert-dialog-description">
+                        <Typography variant="body1" paragraph>
+                            By clicking 'Save' your new interests will be saved, overriding the previous ones.
+                        </Typography>
+                        <Typography variant="body1" paragraph align="center" color="error">
+                            <b>ATTENTION!</b>
+                        </Typography>
+                        <Typography variant="body1" align="center" paragraph>
+                            All the liked events will be cleared!
+                        </Typography>
+                    </div>
                 </DialogContent>
 
                 <DialogActions sx={{ justifyContent: "center" }}>
@@ -291,6 +298,7 @@ export default function SelectCategories(props) {
                             variant="outlined"
                             startIcon={<DeleteIcon />}
                             color="black"
+                            disabled={(currentStep === -1 && temporaryUserCategories.length === 0) || (currentStep !== -1 && temporaryUserSubCategories.length === 0) ? true : false}
                             onClick={() => {
                                 if (pageChipsSelected.length !== 0) {
                                     setAlertClearOpen(true)

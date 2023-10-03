@@ -124,9 +124,15 @@ function App2() {
     timeTo: null,
   });
 
-  function filterArticles() {
+  function filterArticles(newArticles = null) {
 
-    let filteredArticles = articles;
+    let filteredArticles = []
+
+    if(newArticles === null){
+      filteredArticles = articles;
+    } else {
+      filteredArticles = newArticles
+    }
 
     if (filters.categoryName.length > 0) {
       filteredArticles = filteredArticles.filter((article) => filters.categoryName.includes(article.category));
@@ -265,7 +271,7 @@ function App2() {
           })
 
           setArticles(sortedArticles);
-          setFilteredArticles(sortedArticles);
+          filterArticles(sortedArticles);
           setLoading(false);
           setEventsReload(false);
         })
@@ -289,7 +295,7 @@ function App2() {
           })
 
           setArticles(sortedArticles);
-          setFilteredArticles(sortedArticles);
+          filterArticles(sortedArticles);
           setDirtyLiked(false);
           setEventsReload(false);
         })

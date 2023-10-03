@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import Button from '@mui/material/Button';
 import { red } from '@mui/material/colors';
-import { Box } from '@mui/system';
+
 
 export default function CardHome(props) {
 

@@ -9,7 +9,7 @@ const ip = require('ip');
 	option = 0 -> ip_address = "localhost"
 	option = 1 -> ip_address = machine local ip address
 */
-const option = 1;
+const option = 0;
 
 let ip_address;
 

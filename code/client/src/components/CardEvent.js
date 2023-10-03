@@ -96,7 +96,7 @@ export default function CardEvent(props) {
               <br />
               <u><b>Notes:</b></u> {article?.notes}
               <br />
-              <u><b>Website:</b></u> <a style={{ color: 'black' }} onClick={() => setAlertWebSiteOpen(true)}><u>{article?.website}</u></a>
+              <u><b>Website:</b></u> <a href={`https://${article?.website}`} target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}><u>{article?.website}</u></a>
             </Typography>
           </div>
         </CardContent>
