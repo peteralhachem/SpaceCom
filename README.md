@@ -39,8 +39,8 @@ tools for easing the integration process of internationals.
 
 ## Repository Structure
 
-- `assignments` - directory containing all the steps made prior to the implementation and deployment of the application, from needfinding to the deployment of the prototype on _Figma_.
-- `code` - directory containing the full implementation of the application divided into its typical `client` - `server` containers.
+- `assignments/` - directory containing all the steps made prior to the implementation and deployment of the application, from needfinding to the deployment of the prototype on _Figma_.
+- `code/` - directory containing the full implementation of the application divided into its typical `client` - `server` containers.
 
 - `Final_report.pdf` - script containing the whole process of the developpment of the application with an elaborate explanation of the consecutive steps performed.
 ## Tech Stack
